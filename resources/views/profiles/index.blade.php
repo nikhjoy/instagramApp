@@ -7,15 +7,18 @@
             <img src="https://st2.depositphotos.com/4328131/6387/v/600/depositphotos_63870593-stock-illustration-graphic-silver-b-letter-symbol.jpg" style="width: 50%;" class="rounded-circle">
         </div>
         <div class="col-9 pt-5">
-            <div><h1>{{ $user->username }}</h1></div>
+            <div class="d-flex justify-content-between align-items-baseline">
+                <h1>{{ $user->username }}</h1>
+                <a href="#">Add New Post</a>
+            </div>
             <div class="d-flex">
                 <div class="pr-5"><strong>153</strong> posts</div>
                 <div class="pr-5"><strong>25k</strong> followers</div>
                 <div class="pr-5"><strong>212</strong> following</div>
             </div>
-            <div class="pt-4 font-weight-bold">freeCodeGram.org</div>
-            <div>We're a global community of millions of people learning to code together. We're an open source team that shares the code needed!</div>
-            <div><a href="#">www.freecodegram.com</a></div>
+            <div class="pt-4 font-weight-bold">{{ $user->profile->title }}</div>
+            <div>{{ $user->profile->description }}</div>
+            <div><a href="#">{{ $user->profile->url }}</a></div>
         </div>
     </div>
 
